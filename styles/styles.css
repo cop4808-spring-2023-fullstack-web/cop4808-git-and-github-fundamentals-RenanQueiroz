@@ -108,11 +108,36 @@ button {
     background-color: rgb(123, 189, 255);
 }
 
-.firstRowBtns {
+.clearEntry {
     font-weight: bold;
     background-color: #ff4a44;    
 }
 
-.firstRowBtns:active {
+.clearEntry:active {
+    background-color: #fd7a75;    
+}
+
+.squareRoot {
+    font-weight: bold;
+    background-color: #ff4a44;    
+}
+
+.squareRoot:active {
+    background-color: #fd7a75;    
+}
+.square {
+    font-weight: bold;
+    background-color: #ff4a44;    
+}
+
+.square:active {
+    background-color: #fd7a75;    
+}
+.backspace {
+    font-weight: bold;
+    background-color: #ff4a44;    
+}
+
+.backspace:active {
     background-color: #fd7a75;    
 }
