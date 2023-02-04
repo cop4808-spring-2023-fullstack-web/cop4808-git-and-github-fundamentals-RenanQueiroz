@@ -48,7 +48,6 @@ button {
     color: black;
 }
 
-
 #zero {
     grid-column: span 2;
 }
@@ -107,4 +106,13 @@ button {
 
 .percent:active {
     background-color: rgb(123, 189, 255);
+}
+
+.firstRowBtns {
+    font-weight: bold;
+    background-color: #ff4a44;    
+}
+
+.firstRowBtns:active {
+    background-color: #fd7a75;    
 }
