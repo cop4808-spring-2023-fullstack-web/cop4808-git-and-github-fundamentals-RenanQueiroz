@@ -41,9 +41,22 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
+            } else if(buttons[i].classList.contains('clearEntry')) {
+                inputClearEntry();
+                updateDisplay();
+            } else if(buttons[i].classList.contains('squareRoot')) {
+                inputSquareRoot(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('square')) {
+                inputSquare(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('backspace')) {
+                inputBackspace(displayValue);
+                updateDisplay();
+            }
         }
     )}
 }
@@ -156,10 +169,27 @@ function clearDisplay() {
     result = null;
 }
 
-function inputBackspace() {
-    if(firstOperand != null) {
-        firstOperand = null;
-        updateDisplay();
+//Clears entire current entry by setting the displayValue to 0
+function inputClearEntry() {
+    displayValue = '0';
+}
+
+//Takes the square root of the current displayValue and rounds it to fit in the display
+function inputSquareRoot(num) {
+    displayValue = roundAccurately(Math.sqrt(num), 15).toString();
+}
+
+//Takes the square of the current displayValue and rounds it to fit in the display (to accomodate for decimals)
+function inputSquare(num) {
+    displayValue = roundAccurately(Math.pow(num, 2), 15).toString();
+}
+
+//Deletes the last digit of the current displayValue, if none left, display 0 on screen
+function inputBackspace(num) {
+    displayValue = num.slice(0,-1);
+    if(!displayValue){
+        //All numbers were deleted
+        displayValue = '0';
     }
 }
 
